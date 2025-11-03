@@ -1,0 +1,124 @@
+.footer {
+    width: 100%;
+    background-color: #0f0f0f;
+    padding: 4rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #6a85f1, #805ad5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.description {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.5rem 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links li {
+    margin-bottom: 0.5rem;
+}
+
+.links a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: white;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.icon {
+    font-size: 20px;
+    color: #bbb;
+    transition: color 0.2s ease;
+}
+
+.icon:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .links a {
+        font-size: 13px;
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+}

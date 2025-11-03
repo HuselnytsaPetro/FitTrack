@@ -1,0 +1,133 @@
+.statsTable {
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 4.5rem;
+    background-color: #0f0f0f;
+    color: white;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.input,
+.select {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+    flex: 1;
+}
+
+.input:focus,
+.select:focus {
+    box-shadow: 0 0 0 2px rgba(106, 133, 241, 0.3);
+}
+
+.select:hover {
+    background-color: #5110c9;
+}
+
+.select {
+    min-width: 150px;
+}
+
+.tableContainer {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table th {
+    font-weight: 700;
+    color: #bbb;
+    font-size: 14px;
+}
+
+.table td {
+    color: #ddd;
+}
+
+.table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.deleteButton {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+.deleteButton:hover {
+    color: #ff6b6b;
+}
+
+.empty {
+    text-align: center;
+    padding: 2rem;
+    color: #bbb;
+    font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+    .form {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .input,
+    .select {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        font-size: 13px;
+    }
+
+    .deleteButton {
+        font-size: 14px;
+    }
+}

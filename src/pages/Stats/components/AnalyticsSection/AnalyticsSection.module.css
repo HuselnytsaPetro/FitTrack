@@ -1,0 +1,119 @@
+.analyticsSection {
+    width: 100%;
+    padding: 0.1rem 3rem;
+    padding-bottom: 3rem;
+    background-color: #000;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .analyticsSection {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .chartPlaceholder {
+        height: 150px;
+        font-size: 14px;
+    }
+
+    .badge {
+        padding: 8px;
+        gap: 0.5rem;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .badgeTitle {
+        font-size: 14px;
+    }
+
+    .badgeDescription {
+        font-size: 12px;
+    }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.chartPlaceholder {
+    height: 200px;
+    background: #262b41;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bbb;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.badges {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 0.1rem;
+    max-width: 300px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.icon {
+    font-size: 24px;
+    color: #FFD700;
+}
+
+.badgeInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.badgeTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.badgeDescription {
+    font-size: 14px;
+    color: #bbb;
+    font-family: 'Inter', sans-serif;
+}

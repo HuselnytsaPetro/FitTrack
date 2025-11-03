@@ -1,0 +1,227 @@
+.trainingSection {
+    width: 100%;
+    padding: 6rem 2rem;
+    background-color: #000;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 375px;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(122, 143, 255, 0.4);
+}
+
+.card.expanded {
+    height: 700px;
+}
+
+
+.imageContainer {
+    position: relative;
+    height: 200px;
+    flex: 0 0 200px;
+    overflow: hidden;
+    transition: none;
+}
+
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.imageContainer:hover .image {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 16px;
+    background: #161616;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    margin-top: 8px;
+}
+
+/* Розгорнута частина */
+.details {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sectionTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    padding-left: 1.2rem;
+}
+
+.list li {
+    margin-bottom: 4px;
+}
+
+.exercises {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.exerciseTag {
+    background: #262b41;
+    border-radius: 8px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        height: 280px;
+    }
+
+    .card.expanded {
+        height: 450px;
+    }
+
+    .imageContainer {
+        height: 200px;
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .imageContainer {
+        height: 160px;
+        flex: 0 0 160px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .tag {
+        padding: 3px 6px;
+        font-size: 11px;
+    }
+
+    .description {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .card {
+        height: 250px;
+    }
+
+    .card.expanded {
+        height: 400px;
+    }
+
+    .sectionTitle {
+        font-size: 14px;
+    }
+
+    .list {
+        font-size: 13px;
+    }
+
+    .exerciseTag {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

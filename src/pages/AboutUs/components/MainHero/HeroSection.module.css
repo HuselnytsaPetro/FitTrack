@@ -1,0 +1,114 @@
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("src/assets/women-training-bg.png");
+    background-position: center;
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+    padding: 0 16px;
+}
+
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    width: min(800px, 90%);
+    gap: 1.7rem;
+}
+
+.titlesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.titlesContainer p {
+    text-align: left;
+    background: linear-gradient(135deg, #ffffff 0%, #667eea 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter', sans-serif;
+    white-space: normal;
+    user-select: none;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+}
+
+.subtitle {
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+    color: #ddd;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    max-width: 570px;
+    hyphens: auto;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    user-select: none;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 1.15rem 2.2rem;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    min-width: 180px;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.number {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 700;
+    color: rgb(102, 126, 234);
+    font-family: 'Inter', sans-serif;
+}
+
+.label {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    color: #bbb;
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .buttonsContainer {
+        gap: 1rem;
+    }
+
+    .button {
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .stat {
+        gap: 4px;
+    }
+}

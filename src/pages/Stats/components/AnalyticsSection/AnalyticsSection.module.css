@@ -9,6 +9,8 @@
     gap: 2rem;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 6rem;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -26,6 +28,27 @@
     .chartPlaceholder {
         height: 150px;
         font-size: 14px;
+    }
+
+    .metricsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .metricCard {
+        padding: 0.75rem;
+    }
+
+    .metricValue {
+        font-size: 22px;
+    }
+
+    .metricLabel {
+        font-size: 12px;
+    }
+
+    .metricSubtext {
+        font-size: 10px;
     }
 
     .badge {
@@ -78,6 +101,60 @@
     text-align: center;
 }
 
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.metricCard {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.metricCard:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.metricValue {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.metricLabel {
+    font-size: 13px;
+    color: #bbb;
+    font-weight: 500;
+}
+
+.metricProgress {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 0.25rem;
+}
+
+.progressBar {
+    height: 100%;
+    background: linear-gradient(90deg, #6A85F1 0%, #FFD700 100%);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+}
+
+.metricSubtext {
+    font-size: 11px;
+    color: #888;
+    margin-top: 0.25rem;
+}
+
 .badges {
     display: flex;
     flex-direction: column;
@@ -92,11 +169,48 @@
     gap: 1rem;
     padding: 12px;
     border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.badgeActive {
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.badgeActive .icon {
+    font-size: 24px;
+    color: #FFD700;
+    filter: grayscale(0%);
+}
+
+.badgeActive .badgeTitle {
+    color: white;
+}
+
+.badgeActive .badgeDescription {
+    color: #bbb;
+}
+
+.badgeInactive {
+    opacity: 0.4;
+}
+
+.badgeInactive .icon {
+    font-size: 24px;
+    color: #666;
+    filter: grayscale(100%);
+}
+
+.badgeInactive .badgeTitle {
+    color: #666;
+}
+
+.badgeInactive .badgeDescription {
+    color: #555;
 }
 
 .icon {
     font-size: 24px;
-    color: #FFD700;
+    transition: all 0.3s ease;
 }
 
 .badgeInfo {
@@ -108,12 +222,19 @@
 .badgeTitle {
     font-size: 16px;
     font-weight: 700;
-    color: white;
     font-family: 'Inter', sans-serif;
+    transition: color 0.3s ease;
 }
 
 .badgeDescription {
     font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.loadingText {
+    text-align: center;
     color: #bbb;
+    padding: 1rem;
     font-family: 'Inter', sans-serif;
 }

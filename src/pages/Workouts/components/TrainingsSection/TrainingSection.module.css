@@ -5,6 +5,19 @@
     color: white;
 }
 
+.loadingText,
+.errorText,
+.emptyText {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 4rem 0;
+}
+
+.errorText {
+    color: #ff6b6b;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -31,7 +44,7 @@
 }
 
 .card.expanded {
-    height: 700px;
+    height: 575px;
 }
 
 
@@ -150,12 +163,12 @@
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+    width: 100%;
+}
+.buttons button {
+    width: 100%;
 }
 
-/* Адаптивність */
 @media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);

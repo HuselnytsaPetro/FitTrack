@@ -4,6 +4,7 @@ import { apiClient } from '../api/client';
 let globalUser = null;
 let globalLoading = true;
 const listeners = new Set();
+let authMock = null;
 
 const notifyListeners = () => {
   listeners.forEach((listener) => listener());
@@ -12,6 +13,10 @@ const setGlobalUser = (user) => {
   globalUser = user;
   notifyListeners();
 };
+
+export function __setAuthMock(mock) {
+  authMock = mock;
+}
 
 (async () => {
   try {
@@ -67,5 +72,11 @@ export function useAuth() {
     setGlobalUser(null);
   };
 
-  return { user, loading, register, login, logout };
+  const value = { user, loading, register, login, logout };
+
+  if (authMock) {
+    return { ...value, ...authMock };
+  }
+
+  return value;
 }

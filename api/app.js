@@ -19,18 +19,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.json({
-    message: 'FitTrack API',
-    version: '2.0.0',
-    endpoints: {
-      auth: '/api/auth',
-      workouts: '/api/workouts',
-      stats: '/api/stats',
-    },
-  });
-});
-
 app.use('/api/auth', authRoutes);
 app.use('/api/workouts', workoutRoutes);
 app.use('/api/stats', statsRoutes);

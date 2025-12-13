@@ -1,6 +1,6 @@
 import './global.css';
-import AppRouter from './router/AppRouter';
+import ApRouter from "../../fit-track/src/router/AppRouter"
 
 export default function App() {
-  return <AppRouter />;
+  return <ApRouter />;
 }
